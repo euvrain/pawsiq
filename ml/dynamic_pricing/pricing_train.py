@@ -23,6 +23,8 @@
 # %% — Imports
 import pandas as pd
 import numpy as np
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import pickle
 import json
@@ -360,7 +362,7 @@ def predict_surge(
         "zip_hour_demand":  zip_hour_demand,
         "hist_avg_surge":   hist_avg_surge,
         "base_price":       base_price,
-        "svc_drop_in":      svc_drop_in,
+        "svc_walk_30":      int(service_type == "walk_30"),
         "svc_overnight":    svc_overnight,
         "svc_walk_60":      svc_walk_60,
     }
