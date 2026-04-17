@@ -4,7 +4,7 @@ import pandas as pd
 from pathlib import Path
 
 router = APIRouter()
-DATA = Path(__file__).parent.parent.parent / "data" / "synthetic"
+DATA = Path("/app/data/synthetic")
 
 class WalkerResponse(BaseModel):
     user_id:     str

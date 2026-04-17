@@ -4,7 +4,7 @@ import pandas as pd
 from pathlib import Path
 
 router = APIRouter()
-DATA = Path(__file__).parent.parent.parent / "data" / "synthetic"
+DATA = Path("/app/data/synthetic")
 
 @router.get("")
 def list_bookings(status: Optional[str]=None, limit: int=Query(50, le=500)):
